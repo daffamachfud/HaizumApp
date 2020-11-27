@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "199673223734",
+    "firebase_url": "https://haizumapp.firebaseio.com",
+    "project_id": "haizumapp",
+    "storage_bucket": "haizumapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199673223734:android:03f40179c9a8698ed5d697",
+        "android_client_info": {
+          "package_name": "com.onoh.haizumapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199673223734-b52nid7jhl2qefkago5apls24u511c4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGZeWz31USXwjSkuLbQsyCl4m8zTYf-Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199673223734-b52nid7jhl2qefkago5apls24u511c4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
