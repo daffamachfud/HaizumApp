@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.onoh.haizumapp.R
+import com.onoh.haizumapp.ui.auth.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
             // This method will be executed once the timer is over
             // Start your app main activity
 
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
 
             // close this activity
             finish()
