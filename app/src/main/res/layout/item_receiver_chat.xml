@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_date_chat_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tanggal"
+            android:textColor="@color/colorText"
+            android:layout_toEndOf="@+id/img_chat_item"
+            android:textSize="10sp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/linear_chat"
+            tools:ignore="SmallSp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_chat_item"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_account_circle_black_24dp"/>
+
+        <LinearLayout
+            android:id="@+id/linear_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/img_chat_item"
+            android:background="@drawable/item_receiver_side_chat">
+
+            <TextView
+                android:id="@+id/tv_username_chat_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/colorDarkText"
+                android:text="@string/nama_lengkap"/>
+
+            <TextView
+                android:id="@+id/tv_message_chat_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/message"
+                android:textColor="@color/colorDarkText"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

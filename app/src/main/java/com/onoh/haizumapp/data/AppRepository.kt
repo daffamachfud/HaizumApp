@@ -1,5 +1,6 @@
 package com.onoh.haizumapp.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.tasks.Task
@@ -7,6 +8,8 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.onoh.haizumapp.data.model.Chat
+import com.onoh.haizumapp.data.model.User
 
 class AppRepository  :AppDataSource{
 
@@ -22,8 +25,7 @@ class AppRepository  :AppDataSource{
 
     private var auth:FirebaseAuth = FirebaseAuth.getInstance()
     private lateinit var databaseReference: DatabaseReference
-
-
+    val charResults = MutableLiveData<List<Chat>>()
 
     override fun authLogin(email: String, password: String): LiveData<Task<AuthResult>> {
         val result = MutableLiveData<Task<AuthResult>>()
@@ -54,6 +56,53 @@ class AppRepository  :AppDataSource{
                 }
             }
         return result
+    }
+
+    override fun sendMessageChat(senderId: String, date: String, message: String) {
+        val reference = FirebaseDatabase.getInstance().reference
+        val userReference = FirebaseDatabase.getInstance().getReference("Users").child(senderId)
+
+        //get username
+
+        userReference.addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val result =snapshot.getValue(User::class.java)
+                val username = result?.username
+                val hashMap:HashMap<String,String> = HashMap()
+                hashMap["senderId"] = senderId
+                hashMap["username"] = username.toString()
+                hashMap["date"] = date
+                hashMap["message"] = message
+                reference.child("Chat").push().setValue(hashMap)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("onResponse", error.message)
+            }
+        })
+
+    }
+
+    override fun readMessageChat(senderId: String): LiveData<List<Chat>> {
+        val resultChat = ArrayList<Chat>()
+        databaseReference = FirebaseDatabase.getInstance().getReference("Chat")
+        databaseReference.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                resultChat.clear()
+                for(dataSnapshot in snapshot.children){
+                    val chat = dataSnapshot.getValue(Chat::class.java)
+                    if (chat != null) {
+                        resultChat.add(chat)
+                    }
+                }
+                charResults.postValue(resultChat)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("onResponse", error.message)
+            }
+        })
+        return charResults
     }
 
 
