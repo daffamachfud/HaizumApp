@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
     android:background="@color/colorBackgroundPost"
@@ -18,8 +17,9 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/img_item_post_profile"
-            tools:src="@drawable/ic_account_circle_black"/>
+            android:id="@+id/imgProfile"
+            android:src="@android:color/darker_gray"
+           />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,17 +32,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_item_post_name"
                 android:textStyle="bold"
-                android:textColor="@color/colorDarkText"
-                android:textSize="14sp"
-                android:text="@string/nama_lengkap"/>
+                android:background="@android:color/darker_gray" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_item_post_time"
+                android:text="@string/time_post"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                android:text="@string/time_post"/>
+                android:background="@android:color/darker_gray"/>
 
 
         </LinearLayout>
@@ -65,7 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_item_post_text"
-                android:textColor="@color/colorDarkText"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/darker_gray"
                 android:textSize="12sp"
                 android:text="@string/text_post"/>
 
@@ -76,6 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:background="@android:color/darker_gray"
             android:orientation="vertical"
             android:visibility="visible"
             android:id="@+id/layout_image">
@@ -86,7 +86,7 @@
                 android:id="@+id/tv_item_post_text_image"
                 android:textColor="@color/colorDarkText"
                 android:textSize="12sp"
-                android:text="@string/text_post"/>
+             />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -105,6 +105,7 @@
             android:padding="10dp"
             android:orientation="vertical"
             android:visibility="visible"
+            android:background="@android:color/darker_gray"
             android:id="@+id/layout_video">
 
             <TextView
@@ -113,7 +114,7 @@
                 android:id="@+id/tv_item_post_text_video"
                 android:textColor="@color/colorDarkText"
                 android:textSize="12sp"
-                android:text="@string/text_post"/>
+             />
 
             <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerSimple
                 android:layout_width="match_parent"

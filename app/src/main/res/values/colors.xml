@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2C2C2C</color>
+    <color name="colorPrimary">#2E2E2E</color>
+    <color name="colorToolbar">#2c2c2c</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#575757</color>
+    <color name="colorAccent">#F9A826</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorDarkText">#000000</color>
+    <color name="colorShimmer">#dddddd</color>
+    <color name="colorBackgroundPost">#ffffff</color>
+    <color name="colorOrange">#F9A826</color>
+
 
 </resources>

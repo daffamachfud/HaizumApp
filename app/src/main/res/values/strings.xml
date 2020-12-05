@@ -21,4 +21,11 @@
     <string name="tanggal">Tanggal</string>
     <string name="logohaizum">logohaizum</string>
     <string name="masukan_text">Masukan Text</string>
+    <string name="postingan_masih_kosong">Postingan masih kosong</string>
+    <string name="halaman_ini_masing_kosong">Halaman ini masing kosong</string>
+    <string name="time_post">48 mins</string>
+    <string name="text_post">TEXT POST</string>
+    <string name="close_post">close post</string>
+    <string name="post">Post</string>
+    <string name="tuliskan_disini">Tuliskan disini ...</string>
 </resources>

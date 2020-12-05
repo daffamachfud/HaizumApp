@@ -8,32 +8,42 @@
     android:padding="16dp"
     android:background="@color/colorPrimary">
 
-    <ImageButton
+
+    <TextView
         android:id="@+id/imageButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@drawable/ic_account_circle_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rapot"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:drawableTop="@drawable/logorapot2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <TextView
         android:id="@+id/imageButton3"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:background="@drawable/ic_account_circle_black_24dp"
+        android:drawableTop="@drawable/logoamalan2"
+        android:text="Amalan"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <TextView
         android:id="@+id/imageButton2"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_account_circle_black_24dp"
+        android:drawableTop="@drawable/logomasjid"
+        android:text="Ibadah"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
